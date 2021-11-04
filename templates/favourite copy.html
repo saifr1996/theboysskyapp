@@ -15,7 +15,8 @@
 <ul>
     {% for  n in myList%}
     <li>
-        {{n}}
+        <input type="radio" id={n} name={n} value={n}>
+        <label for="html">{{n}}</label><br>
     </li>
     {% endfor %}
 </ul>

@@ -12,23 +12,12 @@
              <img src=" {{url_for('static', filename='sky.jpeg')}}" alt="sky">
         </head>
         <body>
-            <form>
-                <label for="customer_name">Customer name:</label><br>
-                <input type="text" id="customer_name" name="customer_name"><br>
-                <br><br>
-                <form name="engineer_name" id="form1" action="/action_page.php">
-                Subjects: <select name="subject" id="subject">
-                    <option value="" selected="selected">Abdu</option>
-                    <option value="" selected="selected">Kevin</option>
-                    <option value="" selected="selected">Saif</option>
-                    <option value="" selected="selected">Miguel</option>
-                </select>
-                <br><br>
-            </form>
-            <h1>
-                Test Page
-            </h1>
-            <p>This is a static page</p>
+            
+            {% block form %}
+                
+            {% endblock  %}
+                
+
         </body>
     </html>
 </body>

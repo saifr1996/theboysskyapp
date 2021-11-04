@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block form %} 
+
+<form>
+    <label for="customer_name">Customer name:</label><br>
+    <input type="text" id="customer_name" name="customer_name"><br>
+    <br><br>
+    <form name="engineer_name" method = "POST">
+    Subjects: <select name="subject" id="subject">
+        <option value="" selected="selected">Abdu</option>
+        <option value="" selected="selected">Kevin</option>
+        <option value="" selected="selected">Saif</option>
+        <option value="" selected="selected">Miguel</option>
+        
+    </select>
+    <br><br>
+    <ul>
+        {% for  n in rating%}
+        <li>
+            <input type="radio" id={{n}}  >
+            <label for={{n}} >{{n}}</label><br>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><input type = "submit" value = "submit" /></p>
+</form>
+
+{% endblock %}
