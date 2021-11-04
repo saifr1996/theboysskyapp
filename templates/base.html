@@ -7,18 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
-        Welcome to Flask and Jinja
-    </h1>
-    <p>
-        Hello {{name}}
-    </p>
-    <p>
-        Welcome {{group}}
-    </p>
-    <div>
-        {% block content %}{% endblock %}
-    </div>
-
+    <html>
+        <head>
+             <img src=" {{url_for('static', filename='sky.jpeg')}}" alt="sky">
+        </head>
+        <body>
+            <form>
+                <label for="customer_name">Customer name:</label><br>
+                <input type="text" id="customer_name" name="customer_name"><br>
+                <br><br>
+                <form name="engineer_name" id="form1" action="/action_page.php">
+                Subjects: <select name="subject" id="subject">
+                    <option value="" selected="selected">Abdu</option>
+                    <option value="" selected="selected">Kevin</option>
+                    <option value="" selected="selected">Saif</option>
+                    <option value="" selected="selected">Miguel</option>
+                </select>
+                <br><br>
+            </form>
+            <h1>
+                Test Page
+            </h1>
+            <p>This is a static page</p>
+        </body>
+    </html>
 </body>
 </html>
