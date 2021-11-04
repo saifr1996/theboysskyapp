@@ -10,9 +10,7 @@ def main_page():
 
     if request.method == 'POST':
         name = request.form['customer_name']
-        print(name)
         engineer = request.form['subject']
-        print(engineer + " is the best ") 
         return redirect(url_for('thankyou', name=name))
 
   
