@@ -20,6 +20,6 @@ def main_page():
 
 
 @app.route("/thankyou")
-def static_page():
+def thankyou_page():
     return render_template("thankyou_page.html", name="Miguel")
 
