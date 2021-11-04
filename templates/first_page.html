@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block form %} 
 
-<form>
+<form method="POST">
     <label for="customer_name">Customer name:</label><br>
     <input type="text" id="customer_name" name="customer_name"><br>
     <br><br>
-    <form name="engineer_name" method = "POST">
-    Subjects: <select name="subject" id="subject">
-        <option value="" selected="selected">Abdu</option>
-        <option value="" selected="selected">Kevin</option>
-        <option value="" selected="selected">Saif</option>
-        <option value="" selected="selected">Miguel</option>
+    Subjects: 
+    <select name="subject" id="subject">
+        <option value="Abdu" selected="selected">Abdu</option>
+        <option value="Kevin" selected="selected">Kevin</option>
+        <option value="Saif" selected="selected">Saif</option>
+        <option value="Miguel" selected="selected">Miguel</option>
         
     </select>
     <br><br>
