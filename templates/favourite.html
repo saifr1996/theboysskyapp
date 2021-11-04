@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %} 
+
+<h3>This is the start of my child template</h3>
+<br/>
+<p>
+    These are {{name}}'s favourite things'
+</p>
+<p>
+    Zeroth value from the list:<em>{{myList[0]}}</em>
+</p>
+<p>
+    loop through my list:
+</p>
+<ul>
+    {% for  n in myList%}
+    <li>
+        {{n}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
