@@ -14,17 +14,5 @@ def main_page():
 
 @app.route("/thankyou")
 def static_page():
-    return """
-            <html>
-                <head>
-                    <title>Sample - Flask routes </title>
-                </head>
-                <body>
-                    <h1>
-                        Test Page
-                    </h1>
-                    <p>This is a static page</p>
-                </body>
-            </html>
-            """
+    return render_template("thankyou_page.html", name="Miguel")
 
