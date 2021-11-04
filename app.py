@@ -13,13 +13,13 @@ def main_page():
         print(name)
         engineer = request.form['subject']
         print(engineer + " is the best ") 
-        return redirect(url_for('thankyou', name="kevin"))
+        return redirect(url_for('thankyou', name=name))
 
   
     return render_template("first_page.html", rating = rating, form_data = form_data)
 
 
 @app.route("/thankyou")
-def thankyou(name):
-    return render_template("thankyou_page.html", name="Miguel")
+def thankyou():
+    return render_template("thankyou_page.html", name = request.args['name'] )
 
