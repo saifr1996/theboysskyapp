@@ -8,10 +8,11 @@ def main_page():
     
     form_data = request.form
     #return render_template('data.html',form_data = form_data)
+  
     return render_template("first_page.html", rating = rating, form_data = form_data)
 
 
-@app.route("/test/")
+@app.route("/thankyou")
 def static_page():
     return """
             <html>
