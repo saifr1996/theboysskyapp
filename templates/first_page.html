@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block form %} 
 
+<body>
+    {% block message %}
+
+    {% endblock %}
+</body>
+
 <form method="POST">
     <label for="customer_name">Customer name:</label><br>
     <input type="text" id="customer_name" name="customer_name" size=50 required placeholder="Enter your name here ..."><br>
