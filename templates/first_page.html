@@ -3,11 +3,11 @@
 
 <form method="POST">
     <label for="customer_name">Customer name:</label><br>
-    <input type="text" id="customer_name" name="customer_name" size=50, placeholder="Enter your name here ..."><br>
+    <input type="text" id="customer_name" name="customer_name" size=50 required placeholder="Enter your name here ..."><br>
     <br><br>
     <form name="engineer_name" method = "POST">
     Engineer's name: <br>
-        <select name="subject" id="subject">
+        <select name="subject" required id="subject">
             <option value="none" selected disabled hidden>
                 Select an Option
             </option>
@@ -18,7 +18,7 @@
         
     </select>
     <br><br>
-        <input type="radio" id="1" name="rating" value="1"><label for="age1">1</label>
+        <input type="radio" id="1" name="rating" value="1" required><label for="age1">1</label>
         <input type="radio" id="1" name="rating" value="2"><label for="age1">2</label>
         <input type="radio" id="1" name="rating" value="3"><label for="age1">3</label>
         <input type="radio" id="1" name="rating" value="4"><label for="age1">4</label>
