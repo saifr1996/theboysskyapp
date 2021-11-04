@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -13,13 +13,13 @@ def main_page():
         print(name)
         engineer = request.form['subject']
         print(engineer + " is the best ") 
-        return render_template("first_page.html", rating = rating, form_data = form_data)
+        return redirect(url_for('thankyou', name="kevin"))
 
   
     return render_template("first_page.html", rating = rating, form_data = form_data)
 
 
 @app.route("/thankyou")
-def thankyou_page():
+def thankyou(name):
     return render_template("thankyou_page.html", name="Miguel")
 
