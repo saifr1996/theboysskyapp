@@ -3,9 +3,6 @@ import re
 
 app = Flask(__name__)
 
-#bool(re.fullmatch('[A-Za-z]{2,25}( [A-Za-z]{2,25})?', x)
-#this is the regex for full name
-
 @app.route("/", methods = ['POST', 'GET'])
 def main_page():
     rating = list(range(0,9))
@@ -18,7 +15,7 @@ def main_page():
                 return redirect(url_for('thankyou', name=name))
             else:
                 return redirect(url_for('main_page', bad_input=0))
-        # this will never be reached
+        # this will never be
         return render_template("first_page_alt.html")
 
     else:
