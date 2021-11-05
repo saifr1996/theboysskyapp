@@ -4,6 +4,7 @@ import re
 app = Flask(__name__)
 names = {'John':5, 'Juan': 4}
 
+saved_response = {}
 
 @app.route("/", methods = ['POST', 'GET'])
 def main_page():
@@ -13,9 +14,17 @@ def main_page():
     if  arg == "1" or arg == "2":
         if request.method == 'POST':
             name = request.form['customer_name']
+            engineer = request.form['subject']
+            rating = request.form['rating']
+            #comment = request.form['comment']
+
+
             if bool(re.fullmatch('[A-Za-z]{2,25}( [A-Za-z]{2,25})?', name)):
-                if not name in names:
+                if not name in saved_response:
                     #correct input
+                    print("hello")
+                    saved_response[name] = engineer,rating
+                    print(saved_response[name])
                     return redirect(url_for('thankyou', name=name))
                 else:
                     #Wrong input with repeated name
@@ -30,10 +39,16 @@ def main_page():
 
     else:
         if request.method == 'POST':
+
             name = request.form['customer_name']
+            engineer = request.form['subject']
+            rating = request.form['rating']
+            #comment = request.form['comment']
             #this will return false if the full name isnt a valid one
             if bool(re.fullmatch('[A-Za-z]{2,25}( [A-Za-z]{2,25})?', name)):
-                if not name in names:
+                if not name in saved_response:
+                    saved_response[name] = engineer,rating
+                    print(saved_response[name])
                     return redirect(url_for('thankyou', name=name))
                 else:
                     return redirect(url_for('main_page', bad_input=1))
