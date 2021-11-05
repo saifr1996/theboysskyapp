@@ -7,7 +7,7 @@ def main_page():
     rating = list(range(0,9))
     form_data = request.form
 
-    if request.args.get('first_time') == "0":
+    if request.args.get('bad_input') == "0":
 
         print('else')
         if request.method == 'POST':
@@ -15,7 +15,7 @@ def main_page():
                 name = request.form['customer_name']
                 return redirect(url_for('thankyou', name=name))
             else:
-                return redirect(url_for('main_page', first_time=0))
+                return redirect(url_for('main_page', bad_input=0))
         return render_template("first_page_alt.html")
 
     else:
@@ -24,7 +24,7 @@ def main_page():
             if name != "":
                 return redirect(url_for('thankyou', name=name))
             else:
-                return redirect(url_for('main_page', first_time=0))
+                return redirect(url_for('main_page', bad_input=0))
         return render_template("first_page.html", rating = rating, form_data = form_data)
 
 
