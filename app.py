@@ -32,3 +32,6 @@ def main_page():
 @app.route("/thankyou")
 def thankyou():
     return render_template("thankyou_page.html", name = request.args['name'] )
+
+if __name__ == "__main__":
+    app.run(port=5000,host="0.0.0.0", debug=True)
