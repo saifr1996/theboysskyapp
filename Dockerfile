@@ -8,3 +8,6 @@ RUN pip install flask
 EXPOSE 5000
 # Create an entrypoint
 ENTRYPOINT ["python", "app.py"]
+
+
+
