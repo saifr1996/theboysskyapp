@@ -57,7 +57,7 @@ def main_page():
         return render_template("first_page.html", form_data = form_data)
 
 
-@app.route("/thankyouu")
+@app.route("/thankyou")
 def thankyou():
     return render_template("thankyou_page.html", name = request.args['name'] )
 
